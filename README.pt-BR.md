@@ -174,7 +174,11 @@ npm run build
 
 Publique o **conteúdo de `dist/`** em uma hospedagem estática. Não é necessário executar um servidor Node.js em produção. O site usa caminhos absolutos a partir de `/`, portanto a hospedagem deve servir a aplicação na raiz do domínio.
 
-O workflow deste repositório valida o build; ele **não altera DNS nem publica automaticamente no domínio**. Consulte [Manutenção e publicação](docs/MANUTENCAO.md) antes de configurar a hospedagem.
+O projeto Vercel existente **`thejonypeixoto`** está conectado a **`jonypeixoto/thejonypeixoto.com`**. Pushes em `main` acionam os deploys da Vercel; a produção usa [www.thejonypeixoto.com](https://www.thejonypeixoto.com/). O GitHub Actions valida o build e os metadados estáticos de SEO separadamente.
+
+Recursos publicados: [sitemap](https://www.thejonypeixoto.com/sitemap.xml), [robots](https://www.thejonypeixoto.com/robots.txt) e [prévia do WhatsApp](https://www.thejonypeixoto.com/img/og-jony-peixoto-whatsapp.jpg), em JPEG 1200 × 630 com o rosto inteiro. O componente global `<Analytics />` usa `@vercel/analytics/react`, compatível com Vite, e o script foi conferido no domínio público. Veja [Estado da publicação](docs/PUBLICACAO.md).
+
+As cinco URLs atualizadas foram enviadas ao IndexNow. O Google não usa IndexNow; verificação e solicitação de indexação no Search Console continuam sendo etapas separadas, sem garantia de indexação imediata ou posição na busca.
 
 ## Qualidade e limites conhecidos
 

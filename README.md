@@ -174,13 +174,25 @@ npm run build
 
 Publish the **contents of `dist/`** to static hosting. A Node.js production server is not required. Assets use absolute paths starting at `/`, so the application is expected at the domain root.
 
-The repository workflow validates builds. It **does not change DNS or automatically deploy to the domain**. Review the [deployment guide](docs/MANUTENCAO.md) before connecting hosting.
+The existing Vercel project **`thejonypeixoto`** is connected to **`jonypeixoto/thejonypeixoto.com`**. Pushes to `main` trigger Vercel deployments; production is served at [www.thejonypeixoto.com](https://www.thejonypeixoto.com/). The GitHub Actions workflow independently checks the build and static SEO metadata.
+
+| Production resource | Location |
+|---|---|
+| Website | [www.thejonypeixoto.com](https://www.thejonypeixoto.com/) |
+| Sitemap | [sitemap.xml](https://www.thejonypeixoto.com/sitemap.xml) |
+| Crawler rules | [robots.txt](https://www.thejonypeixoto.com/robots.txt) |
+| WhatsApp preview | [1200 × 630 JPEG, full face visible](https://www.thejonypeixoto.com/img/og-jony-peixoto-whatsapp.jpg) |
+| Analytics | `@vercel/analytics` with a global `<Analytics />` from `@vercel/analytics/react` |
+
+The Analytics integration uses the React entry point because the application is Vite, not Next.js. The production script was checked on the public domain. Deployment and Git connection details are recorded in [Publication status](docs/PUBLICACAO.md).
+
+The five updated URLs were submitted through IndexNow. **IndexNow does not submit pages to Google**; Google Search Console verification and indexing requests are separate. No instant indexing or search ranking is promised.
 
 ## Quality and known limitations
 
 - Local Chromium checks at 1456 × 840 and 390 × 844, including emulated touch.
 - Tour, replay, offscreen pausing, reduced motion, and horizontal overflow checked during portrait implementation.
-- Local production build passed; the existing `"use client"` warning in the JSX carousel does not prevent output.
+- Production build and `npm run check:seo` passed. The React modules emit non-blocking `"use client"` bundler warnings.
 - Safari and physical devices require separate review. No Lighthouse score or automated test coverage is claimed.
 - Legacy Kairo guides and demonstrative project media remain, identified in [credits](docs/CREDITOS.md). Project cases, metrics, and copy require editorial confirmation by the site owner.
 

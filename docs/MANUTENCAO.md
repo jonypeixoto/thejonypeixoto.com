@@ -77,7 +77,7 @@ O código desta página não guarda respostas no backend, mas os serviços exter
 4. Configure o domínio e HTTPS no provedor escolhido.
 5. Confira caminhos de mídias, links externos e formulário no endereço final.
 
-Não há configuração de deploy automático no domínio neste repositório. `.github/workflows/build.yml` apenas executa instalação e build em push/pull request. Alterar o repositório não significa que o domínio foi atualizado.
+O projeto Vercel `thejonypeixoto` está conectado ao repositório `jonypeixoto/thejonypeixoto.com`. Pushes em `main` acionam o deploy pela integração Git da Vercel. `.github/workflows/build.yml` executa instalação, build e `check:seo` como validação independente. Aguarde READY na Vercel e confira o domínio antes de considerar uma atualização publicada.
 
 ### Caminho base
 

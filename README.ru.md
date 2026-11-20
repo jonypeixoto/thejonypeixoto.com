@@ -163,7 +163,11 @@ npm run build
 
 Разместите **содержимое `dist/`** на статическом хостинге. Node.js-сервер в продакшене не требуется. Пути ресурсов начинаются с `/`, поэтому приложение рассчитано на корень домена.
 
-Workflow проверяет сборку, но **не меняет DNS и не публикует сайт на домене автоматически**. Перед настройкой хостинга прочитайте [руководство](docs/MANUTENCAO.md).
+Существующий проект Vercel **`thejonypeixoto`** подключён к **`jonypeixoto/thejonypeixoto.com`**. Push в `main` запускает развёртывание Vercel; рабочий домен — [www.thejonypeixoto.com](https://www.thejonypeixoto.com/). GitHub Actions отдельно проверяет сборку и статические SEO-метаданные.
+
+Опубликованы [sitemap](https://www.thejonypeixoto.com/sitemap.xml), [robots](https://www.thejonypeixoto.com/robots.txt) и [изображение для WhatsApp](https://www.thejonypeixoto.com/img/og-jony-peixoto-whatsapp.jpg): JPEG 1200 × 630 с полностью видимым лицом. Глобальный `<Analytics />` использует `@vercel/analytics/react`, поскольку сайт работает на Vite, а не Next.js. Скрипт проверен на рабочем домене. Подробнее: [статус публикации](docs/PUBLICACAO.md).
+
+Пять обновлённых URL отправлены через IndexNow. Google не использует IndexNow; проверка Search Console и запрос индексации выполняются отдельно. Мгновенная индексация и позиции в поиске не гарантируются.
 
 ## Качество и известные ограничения
 

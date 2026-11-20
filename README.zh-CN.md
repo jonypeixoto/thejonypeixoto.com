@@ -163,7 +163,11 @@ npm run build
 
 将 **`dist/` 的内容**发布到静态托管服务。生产环境不需要 Node.js 服务器。资源使用以 `/` 开头的绝对路径，因此应用应部署在域名根目录。
 
-仓库工作流仅验证构建，**不会修改 DNS，也不会自动将网站部署到域名**。配置托管之前，请阅读[部署文档](docs/MANUTENCAO.md)。
+现有 Vercel 项目 **`thejonypeixoto`** 已连接到 **`jonypeixoto/thejonypeixoto.com`**。向 `main` 推送会触发 Vercel 部署，生产域名为 [www.thejonypeixoto.com](https://www.thejonypeixoto.com/)。GitHub Actions 独立检查构建和静态 SEO 元数据。
+
+已发布 [sitemap](https://www.thejonypeixoto.com/sitemap.xml)、[robots](https://www.thejonypeixoto.com/robots.txt) 和 [WhatsApp 预览图](https://www.thejonypeixoto.com/img/og-jony-peixoto-whatsapp.jpg)：1200 × 630 JPEG，完整保留脸部。全局 `<Analytics />` 使用适用于 Vite 的 `@vercel/analytics/react`，而非 Next.js 专用入口。已在生产域名检查脚本。详见[发布状态](docs/PUBLICACAO.md)。
+
+五个更新的 URL 已通过 IndexNow 提交。Google 不使用 IndexNow；Search Console 验证和索引请求需要单独完成，不保证即时索引或搜索排名。
 
 ## 质量与已知限制
 
