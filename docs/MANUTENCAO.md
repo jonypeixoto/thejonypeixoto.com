@@ -90,3 +90,7 @@ Os assets usam URLs como `/img/...` e `/video/...`. Isso funciona na raiz de `th
 ## Documentação visual
 
 Os GIFs em `docs/media/` não fazem parte do carregamento do site. O código das cenas fica em `docs/tools/`; veja o [guia de geração](tools/README.md). Atualize a demonstração quando uma mudança visual tornar o GIF desatualizado.
+
+## Vercel Web Analytics
+
+O pacote `@vercel/analytics` foi instalado. O componente React global fica em `src/components/analytics.jsx`; o projeto usa `@vercel/analytics/react`, sem dependência de Next.js. Confirme Enable em Analytics no painel do projeto e publique um novo build para disponibilizar os endpoints. A versão local de desenvolvimento não inicia a coleta. Referência: https://vercel.com/docs/analytics/quickstart

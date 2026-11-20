@@ -40,6 +40,9 @@ try {
 } catch (erro) {
   console.error('Não foi possível carregar o idioma. Usando o conteúdo original.', erro);
 }
+import('./components/analytics.jsx')
+  .then(({ montaAnalytics }) => montaAnalytics())
+  .catch(erro => console.warn('Não foi possível inicializar o Analytics.', erro));
 nav();
 interface_();
 try {

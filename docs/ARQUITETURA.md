@@ -4,7 +4,7 @@
 
 ## Modelo da aplicação
 
-O site é uma página estática produzida por Vite, com seções HTML independentes. A maior parte da interface usa JavaScript nativo; a galeria gamer recebe uma ilha React, importada sob demanda. Não há backend de aplicação neste repositório.
+O site é uma página estática, com cinco versões de idioma pré-renderizadas, produzida por Vite, com seções HTML independentes. A maior parte da interface usa JavaScript nativo; a galeria gamer recebe uma ilha React, importada sob demanda. Não há backend de aplicação neste repositório.
 
 `index.html` contém metadados, scripts pequenos de abertura e marcas `<!-- @secao nome -->`. O plugin `secoes`, em `vite.config.js`, substitui as marcas pelos arquivos de `src/sections/`. A expansão é recursiva e acontece antes das transformações do Vite, tanto no desenvolvimento quanto no build.
 
@@ -99,3 +99,7 @@ A diretiva `"use client"` é herdada do componente. Este site não usa Next.js; 
 ## Distribuição
 
 `public/` é copiada para a raiz do build. `src/` vira bundles com nomes versionados. Não publique `node_modules/`, caches ou capturas de trabalho. Não há roteamento SPA próprio, armazenamento de leads no servidor nem uma conexão de hospedagem configurada pelo workflow deste repositório.
+
+## SEO e pré-renderização
+
+`src/seo/config.js` centraliza metadados, URLs e JSON-LD. `scripts/seo-html.js` usa parse5 no build para traduzir cada versão antes de servir HTML. O plugin emite a raiz, quatro diretórios de idioma e o sitemap; o seletor usa links rastreáveis. A raiz tem idioma português estável. Consulte [SEO](SEO.md).

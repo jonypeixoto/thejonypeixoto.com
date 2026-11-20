@@ -160,7 +160,10 @@ The detailed engineering guides are currently written in **Portuguese**. The fou
 | [Implementation record](docs/IMPLEMENTACAO.md) | Original foundation, existing customizations, and this session's changes. |
 | [Validation](docs/VALIDACAO.md) | Performed checks, available evidence, and known limitations. |
 | [Credits and asset usage](docs/CREDITOS.md) | Foundation, references, dependencies, media, and usage rights. |
+| [Search visibility and local SEO](docs/SEO.md) | Localized titles, static language URLs, sitemap, structured data, Rio de Janeiro, UK and indexing steps. |
 | [README animations](docs/tools/README.md) | Regenerating the 3D scenes and GIFs. |
+
+Website languages now have stable, pre-rendered URLs: `/` (Portuguese), `/en/` (British English), `/es/`, `/ru/`, and `/zh/`. Legacy `?lang=` links remain supported through client navigation. The root no longer changes language based on browser settings. After building, run `npm run check:seo`.
 
 ## Deployment
 

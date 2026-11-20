@@ -1,7 +1,9 @@
+import { seo, atualizaSeo, idiomaPorCaminho } from '../seo/config.js';
+
 const arquivos = import.meta.glob('../locales/*.json', { import: 'default' });
 const configuracao = {
   pt: { locale: 'pt-BR', pais: 'br', nome: 'Português' },
-  en: { locale: 'en', pais: 'us', nome: 'English' },
+  en: { locale: 'en-GB', pais: 'us', nome: 'English' },
   es: { locale: 'es', pais: 'es', nome: 'Español' },
   ru: { locale: 'ru', pais: 'ru', nome: 'Русский' },
   zh: { locale: 'zh-CN', pais: 'cn', nome: '中文' },
@@ -11,13 +13,20 @@ const ignorado = el => el.closest('script, style, .idiomas__menu, .nav__marca, s
 
 export async function idiomas() {
   const url = new URL(location.href);
-  let salvo;
-  try { salvo = localStorage.getItem('jony-idioma'); } catch {}
-  let idioma = url.searchParams.get('lang') || salvo || navigator.language.split('-')[0];
-  if (!configuracao[idioma]) idioma = 'en';
+  const legado = url.searchParams.get('lang');
+  if (configuracao[legado]) {
+    url.pathname = seo[legado].path;
+    url.searchParams.delete('lang');
+    location.replace(url.href);
+    // Aguarda a navegação para não montar conteúdo de outro idioma.
+    await new Promise(() => {});
+  }
+  // Cada URL tem um idioma estável, independente de cookies e navegador.
+  const idioma = configuracao[legado] ? legado : idiomaPorCaminho(url.pathname);
   const dados = configuracao[idioma];
   document.documentElement.lang = dados.locale;
   document.documentElement.dataset.idioma = idioma;
+  atualizaSeo(idioma);
   const mensagensWhatsApp = {
     pt: 'Opa ! Tudo bem ? Cheguei através do site: THEJONYPEIXOTO.COM e gostaria de implementar inteligência artificial nos meus projetos. Pode me ajudar ?',
     en: 'Hi! How are you? I found you through THEJONYPEIXOTO.COM and would like to implement artificial intelligence in my projects. Can you help me?',
@@ -58,28 +67,16 @@ export async function idiomas() {
   bandeira.alt = dados.nome;
   seletor.querySelector('.idiomas__codigo').textContent = idioma.toUpperCase();
   seletor.querySelectorAll('[data-idioma]').forEach(botao => {
-    botao.setAttribute('aria-pressed', String(botao.dataset.idioma === idioma));
+    if (botao.dataset.idioma === idioma) botao.setAttribute('aria-current', 'page');
     botao.addEventListener('click', () => {
       try { localStorage.setItem('jony-idioma', botao.dataset.idioma); } catch {}
-      url.searchParams.set('lang', botao.dataset.idioma);
-      location.href = url.href;
+      // O href continua funcionando sem JS e pode ser rastreado pelos buscadores.
     });
   });
   document.addEventListener('click', evento => { if (!seletor.contains(evento.target)) seletor.open = false; });
   seletor.addEventListener('keydown', evento => { if (evento.key === 'Escape') { seletor.open = false; seletor.querySelector('summary').focus(); } });
   const dicionario = await arquivos[`../locales/${idioma}.json`]();
   const traduz = texto => dicionario[normaliza(texto)] || texto;
-  const cargos = {
-    pt: 'Cirurgião Digital, Engenheiro de IA e Automação',
-    en: 'Digital Surgeon, AI & Automation Engineer',
-    es: 'Cirujano Digital, Ingeniero de IA y Automatización',
-    ru: 'Цифровой хирург, инженер ИИ и автоматизации',
-    zh: '数字外科医生、人工智能与自动化工程师',
-  };
-  if (idioma !== 'pt') {
-    document.title = `Jony Peixoto™ ® © ∞ · ${cargos[idioma]}`;
-    document.querySelector('meta[name="description"]').content = `Jony Peixoto · ${cargos[idioma]}`;
-  }
   seletor.querySelector('summary').setAttribute('aria-label', traduz('Escolha o idioma'));
   seletor.querySelector('.idiomas__menu').setAttribute('aria-label', traduz('Escolha o idioma'));
   const aplica = raiz => {

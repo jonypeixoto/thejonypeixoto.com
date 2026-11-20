@@ -159,8 +159,11 @@ Os guias técnicos detalhados estão em português. Os botões do topo levam às
 | [Manutenção e publicação](docs/MANUTENCAO.md) | Como trocar conteúdo, integrar serviços, executar o build e publicar. |
 | [Registro de implementação](docs/IMPLEMENTACAO.md) | Base original, personalizações presentes e evolução feita nesta sessão. |
 | [Validação](docs/VALIDACAO.md) | Checagens executadas, evidências disponíveis e limitações conhecidas. |
+| [SEO e descoberta local](docs/SEO.md) | Títulos, URLs estáticas, sitemap, dados estruturados e indexação. |
 | [Créditos e uso de assets](docs/CREDITOS.md) | Origem da base, referências, dependências, mídia e direitos de uso. |
 | [Animações do README](docs/tools/README.md) | Como gerar novamente as cenas 3D e os GIFs. |
+
+Os idiomas agora têm URLs estáveis com HTML traduzido: `/` (português), `/en/` (inglês britânico), `/es/`, `/ru/` e `/zh/`. Links antigos com `?lang=` continuam funcionando por navegação no cliente. A raiz não muda de idioma pela configuração do navegador. Após o build, rode `npm run check:seo`.
 
 ## Publicação
 

@@ -149,7 +149,10 @@ flowchart LR
 | [实现记录](docs/IMPLEMENTACAO.md) | 原始基础、既有定制内容及本次会话中的变更。 |
 | [验证](docs/VALIDACAO.md) | 已执行的检查、证据与已知限制。 |
 | [来源与素材使用](docs/CREDITOS.md) | 项目基础、参考、依赖、媒体及使用权。 |
+| [SEO 与本地搜索](docs/SEO.md) | 多语言标题、静态语言 URL、站点地图、结构化数据与索引步骤。 |
 | [README 动画](docs/tools/README.md) | 重新生成 3D 场景和 GIF。 |
+
+网站语言现在使用稳定且预渲染的 URL：`/`（葡萄牙语）、`/en/`（英式英语）、`/es/`、`/ru/` 和 `/zh/`。旧的 `?lang=` 链接仍通过浏览器导航兼容。根页面不再根据浏览器设置自动切换语言。构建后请运行 `npm run check:seo`。
 
 ## 部署
 
