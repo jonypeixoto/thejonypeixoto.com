@@ -14,7 +14,7 @@ export function videoHero() {
   video.loop = false;
   video.playsInline = true;
   video.preload = 'none';
-  video.poster = camada.querySelector('img')?.currentSrc || '/img/jony-perfil.webp';
+  video.poster = '/img/jony-perfil-640.webp';
   let paginaCarregada = document.readyState === 'complete';
   video.setAttribute('aria-hidden', 'true');
   video.setAttribute('disablepictureinpicture', '');

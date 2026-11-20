@@ -59,6 +59,8 @@ export function caixa(palco, r, { icone = false, fundo = null, grande = false } 
     some(rapido = false, dur = 0.3) {
       if (!viva) return;
       viva = false;
+      // O texto sai antes do fade da caixa para não perder contraste.
+      tam.style.visibility = 'hidden';
       etiquetas.delete(ponto);
       const tira = () => { el.remove(); fill.remove(); };
       if (rapido) return tira();
