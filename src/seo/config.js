@@ -22,6 +22,11 @@ export const seo = {
     title: 'Инженерия ИИ, 3D-сайты и SaaS | Jony Peixoto',
     description: 'Инженерия искусственного интеллекта, 3D-сайты, SaaS, XaaS и платформы с Jony Peixoto. Удалённая работа: Рио-де-Жанейро, Великобритания и весь мир.',
   },
+  ar: {
+    path: '/ar/', locale: 'ar', ogLocale: 'ar_AE',
+    title: 'هندسة الذكاء الاصطناعي ومواقع ثلاثية الأبعاد | Jony Peixoto',
+    description: 'هندسة الذكاء الاصطناعي وتطوير المواقع ثلاثية الأبعاد ومنصات SaaS وXaaS مع Jony Peixoto. خدمات عن بُعد لريو دي جانيرو والمملكة المتحدة والعالم.',
+  },
   zh: {
     path: '/zh/', locale: 'zh-CN', ogLocale: 'zh_CN',
     title: '人工智能工程、3D 网站与 SaaS 平台 | Jony Peixoto',
@@ -33,7 +38,7 @@ export const idiomaPorCaminho = pathname => Object.keys(seo).find(idioma => seo[
 export const urlIdioma = idioma => `${origem}${seo[idioma]?.path || '/'}`;
 export const alternativos = [
   ['pt-BR', 'pt'], ['pt', 'pt'], ['en-GB', 'en'], ['en', 'en'],
-  ['es', 'es'], ['ru', 'ru'], ['zh-Hans', 'zh'], ['zh-CN', 'zh'], ['x-default', 'pt'],
+  ['es', 'es'], ['ru', 'ru'], ['ar', 'ar'], ['zh-Hans', 'zh'], ['zh-CN', 'zh'], ['x-default', 'pt'],
 ];
 
 export function dadosEstruturados(idioma = 'pt') {

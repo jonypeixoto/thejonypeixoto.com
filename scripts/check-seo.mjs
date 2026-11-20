@@ -16,6 +16,7 @@ for (const [code, data] of Object.entries(seo)) {
   const element = tag => all(doc, node => node.tagName === tag);
   const meta = key => element('meta').filter(node => attr(node, 'name') === key || attr(node, 'property') === key);
   assert.equal(attr(element('html')[0], 'lang'), data.locale, path);
+  assert.equal(attr(element('html')[0], 'dir'), code === 'ar' ? 'rtl' : 'ltr');
   const headTitles = all(element('head')[0], node => node.tagName === 'title');
   assert.equal(headTitles.length, 1, `${code}: duplicate title`);
   assert.equal(text(headTitles[0]), data.title);
@@ -47,7 +48,7 @@ for (const [code, data] of Object.entries(seo)) {
   for (const node of element('script').filter(node => attr(node, 'src')?.startsWith('/assets/'))) {
     assert.ok(existsSync(`dist${attr(node, 'src')}`), `${code}: missing build asset`);
   }
-  assert.equal(element('a').filter(node => attr(node, 'data-idioma')).length, 5, 'Crawlable language links');
+  assert.equal(element('a').filter(node => attr(node, 'data-idioma')).length, Object.keys(seo).length, 'Crawlable language links');
   assert.ok(element('a').some(node => attr(node, 'href') === '/privacidade/'), `${code}: privacy footer link missing`);
   assert.ok(element('a').some(node => attr(node, 'href') === '/termos/'), `${code}: terms footer link missing`);
   console.log(`SEO OK: ${data.path} (${data.locale})`);

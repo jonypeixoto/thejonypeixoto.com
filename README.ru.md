@@ -11,6 +11,9 @@
 <h1 align="center">THEJONYPEIXOTO.COM</h1>
 <p align="center"><strong>Портфолио, которое собирается прямо перед вами.</strong><br />Jony Peixoto · «Цифровой хирург» · Инженерия ИИ и автоматизация</p>
 
+Арабская версия доступна по адресу [/ar/](https://www.thejonypeixoto.com/ar/): флаг в меню, направление справа налево, локальный шрифт Noto Sans Arabic и анимация по словам, сохраняющая соединение букв. Юридические страницы остаются на португальском языке.
+
+
 [Политика конфиденциальности](https://www.thejonypeixoto.com/privacidade/) и [условия использования](https://www.thejonypeixoto.com/termos/) доступны на португальском языке. Добавлены адаптивные изображения, отложенная загрузка галереи и контрастные подписи размеров; анимация сохранена. [Результаты аудита и оставшиеся задачи](docs/AUDITORIA.md) — на португальском. Для GA4 нужен идентификатор измерения; целевой мобильный LCP пока не достигнут.
 
 <p align="center"><a href="https://www.thejonypeixoto.com/">Открыть сайт</a> · <a href="https://tally.so/r/Z9OlBy">Диагностика проекта</a> · <a href="docs/ARQUITETURA.md">Архитектура</a> · <a href="docs/MOTION.md">Как устроена анимация</a></p>
@@ -19,7 +22,7 @@
 <img src="https://img.shields.io/badge/Vite-8.3.5-646CFF?style=flat-square" alt="Vite 8.3.5" />
 <img src="https://img.shields.io/badge/GSAP-3.15.0-88CE02?style=flat-square" alt="GSAP 3.15.0" />
 <img src="https://img.shields.io/badge/WebGL-fluid%20reveal-79D9FF?style=flat-square" alt="Маска раскрытия WebGL" />
-<img src="https://img.shields.io/badge/languages-PT%20EN%20ES%20RU%20ZH-B99AFF?style=flat-square" alt="Пять языков сайта" />
+<img src="https://img.shields.io/badge/languages-PT%20EN%20ES%20RU%20ZH%20AR-B99AFF?style=flat-square" alt="Шесть языков сайта" />
 </p>
 
 ## Больше, чем страница

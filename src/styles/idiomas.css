@@ -10,3 +10,24 @@ html[data-idioma='zh'] .hero__titulo { font-size: min(calc(300 * var(--u)), 20vw
 @media (max-width: 760px) {
   html[data-idioma='ru'] .hero__titulo, html[data-idioma='zh'] .hero__titulo { font-size: 18vw; }
 }
+
+/* Árabe: escrita conectada e direção de leitura; trilhos mantêm a física original. */
+html[lang='ar'] { --sans: 'Noto Sans Arabic Variable', sans-serif; --display: 'Noto Sans Arabic Variable', sans-serif; --mao: 'Noto Sans Arabic Variable', sans-serif; }
+html[lang='ar'] .titulo-cond, html[lang='ar'] .titulo-grot { font-weight: 800; letter-spacing: normal; line-height: 1.45; overflow-wrap: normal; }
+html[lang='ar'] .hero__titulo { font-size: min(calc(230 * var(--u)), 20vw); line-height: 1.6; font-weight: 800; letter-spacing: normal; }
+html[lang='ar'] .hero__ola { font-size: calc(38 * var(--u)); line-height: 1.6; rotate: none; }
+html[lang='ar'] .hero__nome, html[lang='ar'] .nav__nome, html[lang='ar'] .rodape__marca { font-family: 'Anton', sans-serif; direction: ltr; text-align: right; }
+html[lang='ar'] .hero__cargo { line-height: 1.6; letter-spacing: normal; overflow-wrap: normal; }
+html[lang='ar'] .hero__texto { line-height: 1.9; }
+html[lang='ar'] .nav__marca, html[lang='ar'] .hero__jonis, html[lang='ar'] .barra, html[lang='ar'] .comp,
+html[lang='ar'] .ferramentas__janela, html[lang='ar'] .ferramentas__trilho,
+html[lang='ar'] .marcas__janela, html[lang='ar'] .ias__janela, html[lang='ar'] .ias__trilho,
+html[lang='ar'] .noticias__lista, html[lang='ar'] .gamer__trilho, html[lang='ar'] .gamer__fan { direction: ltr; }
+html[lang='ar'] .noticias__item, html[lang='ar'] .ias__card, html[lang='ar'] .gamer__intro { direction: rtl; }
+html[lang='ar'] input[type='email'], html[lang='ar'] input[type='tel'], html[lang='ar'] a[href^='mailto:'] { direction: ltr; unicode-bidi: isolate; }
+html[lang='ar'] .idiomas__menu a { justify-content: flex-start; }
+@media (max-width: 760px) {
+ html[lang='ar'] .hero__titulo { font-size: 20vw; }
+ html[lang='ar'] .hero__ola { font-size: 32px; }
+ html[lang='ar'] .hero__nome { font-size: 104px; }
+}

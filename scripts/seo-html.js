@@ -32,8 +32,8 @@ export function preparaPagina(html, idioma = 'pt') {
     for (const child of node.childNodes || []) visita(child);
   }
   if (idioma !== 'pt') visita(body);
-  const nomes = { pt: 'Português', en: 'English', es: 'Español', ru: 'Русский', zh: '中文' };
-  const flags = { pt: 'br', en: 'us', es: 'es', ru: 'ru', zh: 'cn' };
+  const nomes = { pt: 'Português', en: 'English', es: 'Español', ru: 'Русский', zh: '中文', ar: 'العربية' };
+  const flags = { pt: 'br', en: 'us', es: 'es', ru: 'ru', zh: 'cn', ar: 'ae' };
   function marcaIdioma(node) {
     const classes = (atributo(node, 'class') || '').split(/\s+/);
     if (classes.includes('idiomas__codigo')) node.childNodes[0].value = idioma.toUpperCase();
@@ -50,6 +50,7 @@ export function preparaPagina(html, idioma = 'pt') {
   }
   marcaIdioma(body);
   define(root, 'lang', dados.locale);
+  define(root, 'dir', idioma === 'ar' ? 'rtl' : 'ltr');
   define(root, 'data-idioma', idioma);
   define(root, 'data-idioma-inicial', idioma);
   // Reaplicável: as páginas traduzidas são geradas do HTML final do Vite.

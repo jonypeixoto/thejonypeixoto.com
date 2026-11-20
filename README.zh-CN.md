@@ -11,6 +11,9 @@
 <h1 align="center">THEJONYPEIXOTO.COM</h1>
 <p align="center"><strong>一个在你眼前逐步构建的作品集。</strong><br />Jony Peixoto · 数字外科医生 · 人工智能与自动化工程</p>
 
+新增[阿拉伯语版本 /ar/](https://www.thejonypeixoto.com/ar/)，提供语言旗帜、从右到左布局、本地 Noto Sans Arabic 字体和保留字母连写的逐词动画。法律页面仍为葡萄牙语。
+
+
 [隐私政策](https://www.thejonypeixoto.com/privacidade/)和[使用条款](https://www.thejonypeixoto.com/termos/)以葡萄牙语提供。已添加响应式图片、按需加载的图库和高对比度尺寸标签，并保留原有动画。[审计状态与待办事项](docs/AUDITORIA.md)以葡萄牙语记录。GA4 尚需衡量 ID，移动端 LCP 目标尚未达到。
 
 <p align="center"><a href="https://www.thejonypeixoto.com/">访问网站</a> · <a href="https://tally.so/r/Z9OlBy">开始项目诊断</a> · <a href="docs/ARQUITETURA.md">架构</a> · <a href="docs/MOTION.md">动画实现</a></p>
@@ -19,7 +22,7 @@
 <img src="https://img.shields.io/badge/Vite-8.3.5-646CFF?style=flat-square" alt="Vite 8.3.5" />
 <img src="https://img.shields.io/badge/GSAP-3.15.0-88CE02?style=flat-square" alt="GSAP 3.15.0" />
 <img src="https://img.shields.io/badge/WebGL-fluid%20reveal-79D9FF?style=flat-square" alt="WebGL 流体显现效果" />
-<img src="https://img.shields.io/badge/languages-PT%20EN%20ES%20RU%20ZH-B99AFF?style=flat-square" alt="网站支持五种语言" />
+<img src="https://img.shields.io/badge/languages-PT%20EN%20ES%20RU%20ZH%20AR-B99AFF?style=flat-square" alt="网站支持六种语言" />
 </p>
 
 ## 不止是一个页面
@@ -43,7 +46,7 @@
 | **Tour 导览** | 依次浏览各个区域并等待组装，提供 1×、2×、4× 与重播控制。 |
 | **项目浏览** | 搜索、分类筛选、移动端横向列表，以及线框稿与最终界面对比。 |
 | **游戏开发经历** | 带有透视、聚焦和弹性入场效果的扇形卡片，作为 React 岛屿加载。 |
-| **五种网站语言** | 葡萄牙语、英语、西班牙语、俄语和中文，支持 URL 参数与本地偏好。 |
+| **六种网站语言** | 葡萄牙语、英语、西班牙语、俄语和中文，支持 URL 参数与本地偏好。 |
 | **联系服务** | Tally 诊断、本地化 WhatsApp 消息和 Web3Forms 表单提交。 |
 | **无障碍动效** | 尊重减少动态效果偏好、离屏暂停，并保留移动端原生滚动。 |
 
@@ -109,7 +112,7 @@ npm run dev -- --host 0.0.0.0
 │   ├── sections/             # 各区域的 HTML 与 CSS
 │   ├── motion/               # 光标群、肖像、轮播与交互
 │   ├── components/           # 游戏轮播 React 岛屿
-│   ├── locales/              # 网站五种语言的词典
+│   ├── locales/              # 网站六种语言的词典
 │   └── styles/               # 设计令牌、基础与共享样式
 ├── public/
 │   ├── img/                  # 肖像、项目、品牌、新闻与旗帜

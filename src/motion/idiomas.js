@@ -6,6 +6,7 @@ const configuracao = {
   en: { locale: 'en-GB', pais: 'us', nome: 'English' },
   es: { locale: 'es', pais: 'es', nome: 'Español' },
   ru: { locale: 'ru', pais: 'ru', nome: 'Русский' },
+  ar: { locale: 'ar', pais: 'ae', nome: 'العربية' },
   zh: { locale: 'zh-CN', pais: 'cn', nome: '中文' },
 };
 const normaliza = texto => texto.replace(/\s+/g, ' ').trim();
@@ -25,9 +26,11 @@ export async function idiomas() {
   const idioma = configuracao[legado] ? legado : idiomaPorCaminho(url.pathname);
   const dados = configuracao[idioma];
   document.documentElement.lang = dados.locale;
+  document.documentElement.dir = idioma === 'ar' ? 'rtl' : 'ltr';
   document.documentElement.dataset.idioma = idioma;
   atualizaSeo(idioma);
   const mensagensWhatsApp = {
+    ar: 'مرحبًا! وصلت عبر THEJONYPEIXOTO.COM وأرغب في تطبيق الذكاء الاصطناعي في مشاريعي. هل يمكنك مساعدتي؟',
     pt: 'Opa ! Tudo bem ? Cheguei através do site: THEJONYPEIXOTO.COM e gostaria de implementar inteligência artificial nos meus projetos. Pode me ajudar ?',
     en: 'Hi! How are you? I found you through THEJONYPEIXOTO.COM and would like to implement artificial intelligence in my projects. Can you help me?',
     es: '¡Hola! ¿Cómo estás? Llegué a través del sitio THEJONYPEIXOTO.COM y me gustaría implementar inteligencia artificial en mis proyectos. ¿Puedes ayudarme?',
@@ -41,6 +44,7 @@ export async function idiomas() {
     conversa.href = contato.href;
   }
   const mensagensProblema = {
+    ar: 'مرحبًا، وصلت عبر THEJONYPEIXOTO.COM ولدي المشكلة التالية: [صف مشكلتك هنا]. كيف يمكنني استخدام الذكاء الاصطناعي لحلها؟',
     pt: 'Oi, vim pelo site THEJONYPEIXOTO.COM e estou com o seguinte problema: [DESCREVA O SEU PROBLEMA AQUI]. Como posso utilizar inteligência artificial nesse problema ?',
     en: 'Hi, I came from THEJONYPEIXOTO.COM and I have the following problem: [DESCRIBE YOUR PROBLEM HERE]. How can I use artificial intelligence to solve this problem?',
     es: 'Hola, llegué desde THEJONYPEIXOTO.COM y tengo el siguiente problema: [DESCRIBE TU PROBLEMA AQUÍ]. ¿Cómo puedo utilizar inteligencia artificial para resolver este problema?',
@@ -48,6 +52,7 @@ export async function idiomas() {
     zh: '你好，我通过 THEJONYPEIXOTO.COM 网站找到你，我遇到了以下问题：[请在此描述您的问题]。我可以如何利用人工智能解决这个问题？',
   };
   const mensagensPortfolio = {
+    ar: 'مرحبًا! اطلعت على أعمالك وأود أن أوضح احتياجاتي لمناقشة التعاون معك.',
     pt: 'Oi, tudo bem? Chequei o seu portfólio e gostaria de mostrar o que preciso para fazermos negócio...',
     en: "Hi, how are you? I checked your portfolio and I'd like to show you what I need for us to do business...",
     es: 'Hola, ¿cómo estás? Revisé tu portafolio y me gustaría mostrarte lo que necesito para que hagamos negocios...',

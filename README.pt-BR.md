@@ -15,6 +15,9 @@
 <h1 align="center">THEJONYPEIXOTO.COM</h1>
 <p align="center"><strong>O portfólio que se constrói na sua frente.</strong><br />Jony Peixoto · Cirurgião Digital · Engenharia de IA & Automação</p>
 
+Árabe disponível em [/ar/](https://www.thejonypeixoto.com/ar/), com bandeira no seletor, leitura da direita para a esquerda, fonte Noto Sans Arabic local e animação por palavras para preservar as letras conectadas. As páginas legais continuam em português.
+
+
 A [política de privacidade](https://www.thejonypeixoto.com/privacidade/) e os [termos de uso](https://www.thejonypeixoto.com/termos/) estão disponíveis em português. Imagens responsivas, galeria sob demanda e etiquetas com contraste preservam as animações. Consulte o [estado da auditoria e as pendências](docs/AUDITORIA.md). O GA4 aguarda um ID de medição; a meta de LCP mobile ainda não foi atingida.
 
 
@@ -30,7 +33,7 @@ A [política de privacidade](https://www.thejonypeixoto.com/privacidade/) e os [
   <img src="https://img.shields.io/badge/Vite-8.3.5-646CFF?style=flat-square" alt="Vite 8.3.5" />
   <img src="https://img.shields.io/badge/GSAP-3.15.0-88CE02?style=flat-square" alt="GSAP 3.15.0" />
   <img src="https://img.shields.io/badge/WebGL-fluid%20reveal-79D9FF?style=flat-square" alt="WebGL e máscara fluida" />
-  <img src="https://img.shields.io/badge/idiomas-PT%20EN%20ES%20RU%20ZH-B99AFF?style=flat-square" alt="Cinco idiomas" />
+  <img src="https://img.shields.io/badge/idiomas-PT%20EN%20ES%20RU%20ZH%20AR-B99AFF?style=flat-square" alt="Seis idiomas" />
 </p>
 
 ## Uma experiência, além de uma página
@@ -54,7 +57,7 @@ O projeto reúne a identidade de Jony Peixoto, projetos de IA e automação, tra
 | **Tour guiado** | Percorre as seções e acompanha a montagem; inclui 1×, 2×, 4× e replay. |
 | **Projetos exploráveis** | Busca, filtros por categoria, trilho mobile e comparador de rascunho/tela final. |
 | **Trajetória gamer** | Carrossel em leque, com perspectiva, foco e entrada elástica; montado como uma ilha React. |
-| **Conteúdo em cinco idiomas** | Português, inglês, espanhol, russo e chinês, com seleção por URL e preferência local. |
+| **Conteúdo em seis idiomas** | Português, inglês, espanhol, russo e chinês, com seleção por URL e preferência local. |
 | **Contato conectado** | Diagnóstico no Tally, mensagens localizadas no WhatsApp e envio via Web3Forms. |
 | **Movimento acessível** | Preferência por movimento reduzido, pausa fora da tela e rolagem nativa no celular. |
 
@@ -120,7 +123,7 @@ npm run dev -- --host 0.0.0.0
 │   ├── sections/             # HTML e CSS de cada seção
 │   ├── motion/               # Enxame, rosto, carrosséis e interações
 │   ├── components/           # Ilha React do carrossel em leque
-│   ├── locales/              # Dicionários dos cinco idiomas
+│   ├── locales/              # Dicionários dos seis idiomas
 │   └── styles/               # Tokens, base, componentes e CSS do enxame
 ├── public/
 │   ├── img/                  # Retratos, projetos, marcas, notícias e bandeiras

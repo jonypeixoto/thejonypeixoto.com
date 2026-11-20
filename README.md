@@ -15,6 +15,9 @@
 <h1 align="center">THEJONYPEIXOTO.COM</h1>
 <p align="center"><strong>A portfolio that builds itself in front of you.</strong><br />Jony Peixoto · Digital Surgeon · AI & Automation Engineering</p>
 
+Arabic is available at [/ar/](https://www.thejonypeixoto.com/ar/), with an Arabic language flag, right-to-left layout, locally hosted Noto Sans Arabic, and word-based motion that preserves connected Arabic letters. Legal documents remain in Portuguese.
+
+
 Privacy and terms are available in Portuguese at [/privacidade/](https://www.thejonypeixoto.com/privacidade/) and [/termos/](https://www.thejonypeixoto.com/termos/). Responsive images, deferred gallery loading and accessible measurement labels preserve the original motion. See the [audit status and remaining setup](docs/AUDITORIA.md). GA4 is pending a measurement ID; the mobile LCP target is not yet met.
 
 
@@ -30,7 +33,7 @@ Privacy and terms are available in Portuguese at [/privacidade/](https://www.the
   <img src="https://img.shields.io/badge/Vite-8.3.5-646CFF?style=flat-square" alt="Vite 8.3.5" />
   <img src="https://img.shields.io/badge/GSAP-3.15.0-88CE02?style=flat-square" alt="GSAP 3.15.0" />
   <img src="https://img.shields.io/badge/WebGL-fluid%20reveal-79D9FF?style=flat-square" alt="WebGL fluid reveal" />
-  <img src="https://img.shields.io/badge/languages-PT%20EN%20ES%20RU%20ZH-B99AFF?style=flat-square" alt="Five website languages" />
+  <img src="https://img.shields.io/badge/languages-PT%20EN%20ES%20RU%20ZH%20AR-B99AFF?style=flat-square" alt="Six website languages" />
 </p>
 
 ## An experience beyond a page
@@ -54,7 +57,7 @@ The project brings together Jony Peixoto's identity, AI and automation projects,
 | **Guided Tour** | Visits sections and follows assembly, with 1×, 2×, 4×, and replay controls. |
 | **Explorable projects** | Search, category filters, mobile rails, and a wireframe/final-screen comparison. |
 | **Gaming journey** | A perspective card fan with focus and an elastic entrance, implemented as a React island. |
-| **Five website languages** | Portuguese, English, Spanish, Russian, and Chinese, with URL and saved-preference selection. |
+| **Six website languages** | Portuguese, English, Spanish, Russian, and Chinese, with URL and saved-preference selection. |
 | **Connected contact** | Tally diagnosis, localized WhatsApp messages, and Web3Forms submission. |
 | **Accessible motion** | Reduced-motion preferences, offscreen pausing, and native mobile scrolling. |
 
@@ -120,7 +123,7 @@ npm run dev -- --host 0.0.0.0
 │   ├── sections/             # Each section's HTML and CSS
 │   ├── motion/               # Swarm, portrait, carousels, interactions
 │   ├── components/           # Gaming carousel React island
-│   ├── locales/              # Five website translation dictionaries
+│   ├── locales/              # Six website translation dictionaries
 │   └── styles/               # Tokens, base, shared pieces, swarm styles
 ├── public/
 │   ├── img/                  # Portraits, projects, brands, news, flags

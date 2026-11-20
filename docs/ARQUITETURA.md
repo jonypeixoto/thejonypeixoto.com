@@ -4,7 +4,7 @@
 
 ## Modelo da aplicação
 
-O site é uma página estática, com cinco versões de idioma pré-renderizadas, produzida por Vite, com seções HTML independentes. A maior parte da interface usa JavaScript nativo; a galeria gamer recebe uma ilha React, importada sob demanda. Não há backend de aplicação neste repositório.
+O site é uma página estática, com seis versões de idioma pré-renderizadas, produzida por Vite, com seções HTML independentes. A maior parte da interface usa JavaScript nativo; a galeria gamer recebe uma ilha React, importada sob demanda. Não há backend de aplicação neste repositório.
 
 `index.html` contém metadados, scripts pequenos de abertura e marcas `<!-- @secao nome -->`. O plugin `secoes`, em `vite.config.js`, substitui as marcas pelos arquivos de `src/sections/`. A expansão é recursiva e acontece antes das transformações do Vite, tanto no desenvolvimento quanto no build.
 

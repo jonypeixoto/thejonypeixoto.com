@@ -631,7 +631,8 @@ export function enxame(barra) {
   function acendeTitulo(c) {
     const el = c.el;
     c.html = el.innerHTML;
-    el.innerHTML = [...el.textContent].map((l) => `<span class="letra">${l}</span>`).join('');
+    const partes = raiz.lang === 'ar' ? (el.textContent.match(/\S+|\s+/gu) || []) : [...el.textContent];
+    el.innerHTML = partes.map((l) => `<span class="letra">${l}</span>`).join('');
     el.classList.add('c-viva');
     c.caixa?.some(false, 0.5);
     const letras = gsap.utils.shuffle([...el.querySelectorAll('.letra')]);
@@ -862,7 +863,7 @@ export function enxame(barra) {
   function carregado() {
     const fontes = document.fonts
       ? Promise.all([
-          document.fonts.load('400 100px "Anton"'),
+          document.fonts.load(raiz.lang === 'ar' ? '800 100px "Noto Sans Arabic Variable"' : '400 100px "Anton"'),
           document.fonts.load('600 40px "Caveat Variable"'),
           document.fonts.load('400 16px "Manrope Variable"'),
           document.fonts.load('800 16px "Manrope Variable"'),

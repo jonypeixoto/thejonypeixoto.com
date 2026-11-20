@@ -11,7 +11,9 @@ export function divide(el) {
         const txt = f.textContent.replace(/\s+/g, ' ');
         if (!txt) { f.remove(); continue; }
         const frag = document.createDocumentFragment();
-        for (const ch of txt) {
+        // Palavras árabes permanecem inteiras para preservar a ligação das letras.
+        const partes = document.documentElement.lang === 'ar' ? (txt.match(/\S+|\s+/gu) || []) : [...txt];
+        for (const ch of partes) {
           // elemento próprio (não <span>), para nenhuma regra de span da página pegar as letras soltas
           const s = document.createElement('x-l');
           s.className = 'ch';
@@ -59,6 +61,7 @@ export function digita(div, a, palco, fonte) {
   const ts = tempos(unidades);
   const total = ts.at(-1) || 0.01;
   const altura = fonte * 1.12;
+  const rtl = getComputedStyle(div.el).direction === 'rtl';
   const caret = document.createElement('i');
   caret.className = 'caret';
   caret.style.height = `${altura}px`;
@@ -69,7 +72,7 @@ export function digita(div, a, palco, fonte) {
     const u = unidades[Math.max(0, k - 1)];
     if (!u) return;
     const r = u.getBoundingClientRect();
-    const x = (k ? r.right : r.left) + scrollX;
+    const x = (rtl ? (k ? r.left : r.right) : (k ? r.right : r.left)) + scrollX;
     const y = r.top + r.height / 2 - altura / 2 + scrollY;
     caret.style.transform = `translate(${x}px, ${y}px)`;
     if (segue) {

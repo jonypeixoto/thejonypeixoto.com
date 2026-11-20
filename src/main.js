@@ -1,4 +1,5 @@
 import '@fontsource/anton/400.css';
+import '@fontsource-variable/noto-sans-arabic/wght.css';
 import '@fontsource/space-mono/400.css';
 import '@fontsource-variable/caveat/wght.css';
 import '@fontsource-variable/manrope/wght.css';

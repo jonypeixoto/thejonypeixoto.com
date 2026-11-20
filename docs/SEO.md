@@ -26,6 +26,7 @@ Não foi adicionada uma lista de `meta keywords`: ela não substitui conteúdo r
 | `https://www.thejonypeixoto.com/en/` | Inglês britânico; Reino Unido e público internacional em inglês. |
 | `https://www.thejonypeixoto.com/es/` | Espanhol. |
 | `https://www.thejonypeixoto.com/ru/` | Russo. |
+| `https://www.thejonypeixoto.com/ar/` | Árabe; escrita RTL, sem restringir a um país. |
 | `https://www.thejonypeixoto.com/zh/` | Chinês simplificado. |
 
 Cada versão tem conteúdo traduzido no HTML gerado, sem precisar executar JavaScript para ler os textos. `parse5` faz a transformação no desenvolvimento e no build; não é enviado ao navegador. O seletor usa links HTML rastreáveis.
@@ -37,7 +38,7 @@ A raiz passa a abrir em português de forma estável. O idioma não é mais alte
 - `title`, description e robots coerentes por idioma.
 - Canonical próprio para cada versão, usando o domínio oficial com `www` e HTTPS.
 - Alternativas `hreflang` recíprocas: `pt-BR`, `pt`, `en-GB`, `en`, `es`, `ru`, `zh-Hans`, `zh-CN` e `x-default`.
-- Sitemap XML com as cinco URLs e suas alternativas; gerado pelo plugin.
+- Sitemap XML com seis URLs de idiomas e suas alternativas, além de privacidade e termos; gerado pelo plugin.
 - `public/robots.txt` permite rastreamento e informa o sitemap.
 - Open Graph e Twitter Card com a foto escolhida pelo responsável em `public/img/og-jony-peixoto-whatsapp.jpg` (1200 × 630, JPEG de aproximadamente 63 KB), com o rosto inteiro dentro da área central.
 - JSON-LD com Person, Organization, Service, WebSite e WebPage.
