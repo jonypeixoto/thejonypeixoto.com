@@ -1,0 +1,14 @@
+.ias__controles { display: flex; gap: calc(8 * var(--su)); }
+.ias__controles button { min-width: 44px; min-height: 44px; padding: calc(10 * var(--su)); border: 1px solid var(--fio-forte); background: var(--cartao); color: var(--texto); font: 700 var(--s-rotulo) var(--sans); cursor: pointer; }
+.ias__janela { margin-top: calc(40 * var(--su)); overflow: hidden; }
+.ias__janela:focus-visible { outline: 2px solid var(--sel); outline-offset: 4px; }
+.ias__trilho { display: flex; width: max-content; list-style: none; padding: 0; margin: 0; }
+.ias__trilho > li { width: calc(360 * var(--su)); flex: 0 0 auto; display: grid; justify-items: center; gap: calc(24 * var(--su)); padding: calc(32 * var(--su)) calc(16 * var(--su)); border-right: 1px solid var(--fio); }
+.ias__trilho img { width: auto; height: calc(120 * var(--su)); object-fit: contain; }
+.ias__trilho h3 { color: var(--texto); font: 800 var(--s-h3) / 1.3 var(--sans); text-align: center; }
+.ias__contato { display: grid; justify-items: center; gap: calc(24 * var(--su)); min-height: 44px; max-width: 100%; }
+html.monta .ias:not(.ias--pronta) .ias__trilho > [aria-hidden='true'] { visibility: hidden; }
+@media (max-width: 760px) {
+  .ias__trilho > li { width: calc(260 * var(--su)); }
+  .ias__controles { width: 100%; justify-content: flex-end; }
+}

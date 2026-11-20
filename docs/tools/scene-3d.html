@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<title>THEJONYPEIXOTO.COM — README 3D scene</title>
+<style>html,body{margin:0;background:#0b0909}canvas{display:block}</style>
+<canvas id="scene"></canvas>
+<script>
+const canvas=document.querySelector('canvas'),ctx=canvas.getContext('2d');
+const cyan='#79d9ff',violet='#b99aff',pink='#f099df',white='#f5f1f3';
+const vertices=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];
+const faces=[[0,1,2,3],[4,7,6,5],[0,4,5,1],[3,2,6,7],[1,5,6,2],[0,3,7,4]];
+function rotate([x,y,z],a,b){const X=x*Math.cos(a)+z*Math.sin(a),Z=-x*Math.sin(a)+z*Math.cos(a);return [X,y*Math.cos(b)-Z*Math.sin(b),y*Math.sin(b)+Z*Math.cos(b)];}
+function point(v,cx,cy){const k=620/(620+v[2]);return [cx+v[0]*k,cy+v[1]*k,k];}
+function line(points,color,width=1){ctx.beginPath();points.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.strokeStyle=color;ctx.lineWidth=width;ctx.stroke();}
+function label(text,x,y,size,color=white,weight=400){ctx.font=`${weight} ${size}px Arial, sans-serif`;ctx.fillStyle=color;ctx.fillText(text,x,y);}
+function cursor(x,y,s,color,angle=0){ctx.save();ctx.translate(x,y);ctx.rotate(angle);ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(s*.72,s*.34);ctx.lineTo(s*.36,s*.44);ctx.lineTo(s*.25,s*.78);ctx.closePath();ctx.fillStyle=color;ctx.shadowColor=color;ctx.shadowBlur=12;ctx.fill();ctx.restore();}
+window.renderFrame=(phase,mode='hero')=>{
+ const orbit=mode==='orbit',W=1000,H=orbit?340:440;canvas.width=W;canvas.height=H;
+ const a=phase*Math.PI*2,cx=orbit?500:785,cy=orbit?165:210;
+ ctx.fillStyle='#0b0909';ctx.fillRect(0,0,W,H);
+ let glow=ctx.createRadialGradient(cx,cy,0,cx,cy,orbit?300:360);glow.addColorStop(0,'#20293b');glow.addColorStop(.5,'#171326');glow.addColorStop(1,'#0b0909');ctx.fillStyle=glow;ctx.fillRect(0,0,W,H);
+ ctx.strokeStyle='#26222b';ctx.lineWidth=.7;
+ for(let i=0;i<20;i++){const x=i*80-200;line([[W/2+(x-W/2)*.2,H*.63],[x,H]],'#211e27');}
+ for(let i=0;i<7;i++){let y=H*.65+(H*.35)*(i/6)**2;line([[0,y],[W,y]],'#211e27');}
+ // Três órbitas em planos 3D diferentes, sem dependências gráficas.
+ const rings=[];
+ for(let j=0;j<3;j++){
+  const ring=[];for(let i=0;i<=180;i++){const t=i/180*Math.PI*2;const r=155+j*8;let v=rotate([Math.cos(t)*r,Math.sin(t)*r,0],.3+j*.9,Math.sin(a)*.13+j*.75);ring.push(point(v,cx,cy));}rings.push(ring);
+  line(ring,[ '#79d9ff44','#b99aff44','#f099df44'][j],1);
+ }
+ const size=orbit?60:72;
+ const cube=vertices.map(v=>rotate(v.map(n=>n*size),a,.37+Math.sin(a)*.18));
+ faces.map((f,i)=>({f,i,z:f.reduce((s,j)=>s+cube[j][2],0)/4})).sort((a,b)=>b.z-a.z).forEach(({f,i})=>{
+  const ps=f.map(j=>point(cube[j],cx,cy));ctx.beginPath();ps.forEach((p,j)=>j?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.closePath();ctx.fillStyle=['#75d7ff14','#b99aff16','#f099df13'][i%3];ctx.fill();ctx.strokeStyle=['#79d9ff88','#b99aff88','#f099df88'][i%3];ctx.stroke();
+ });
+ for(let j=0;j<3;j++){
+  const t=a+j*Math.PI*2/3,v=rotate([Math.cos(t)*170,Math.sin(t)*170,0],.3+j*.9,Math.sin(a)*.13+j*.75),p=point(v,cx,cy),col=[cyan,violet,pink][j];
+  line([[cx,cy],p],col+'33');cursor(p[0],p[1],25*p[2],col,Math.sin(t)*.4);
+  const text=['HTML','GSAP','WEBGL'][j];ctx.fillStyle='#111018';ctx.fillRect(p[0]+17,p[1]-12,69,25);ctx.strokeStyle=col+'66';ctx.strokeRect(p[0]+17,p[1]-12,69,25);label(text,p[0]+26,p[1]+5,10,col,700);
+ }
+ for(let i=0;i<36;i++){
+  const t=i*2.399+a*.3,z=Math.sin(t)*110,r=100+(i%6)*14,p=point([Math.cos(t)*r,Math.sin(i*1.7+a)*110,z],cx,cy);ctx.fillStyle=i%2?cyan:violet;ctx.globalAlpha=.2+(i%5)*.12;ctx.fillRect(p[0],p[1],2,2);ctx.globalAlpha=1;
+ }
+ if(!orbit){
+  label('THEJONYPEIXOTO.COM',46,45,13,cyan,700);label('PORTFOLIO / SOURCE CODE',46,72,10,'#8c879b');
+  label('JONY',42,181,96,white,800);label('PEIXOTO',42,272,96,white,800);
+  label('ENGENHARIA DE IA & AUTOMAÇÃO',46,316,15,'#c8bdd5',700);
+  line([[46,343],[540,343]],'#39303f');label('HTML REAL.  MOVIMENTO VIVO.  EXPERIÊNCIA PRÓPRIA.',46,370,10,'#a99fb8');
+  ctx.fillStyle=cyan;ctx.beginPath();ctx.arc(50,406,3,0,7);ctx.fill();label('BUILT LIVE, BY A SWARM OF CURSORS',63,410,10,cyan);
+  label('01 / THE CORE',704,418,10,'#827c91');
+ }else{
+  label('MOTION, IN DEPTH.',36,45,21,white,700);label('THREE DIMENSIONS / ONE EXPERIENCE',36,68,10,'#998ca9');
+  label('CONTEÚDO',37,132,11,cyan,700);label('HTML SEMÂNTICO',37,151,10,'#8c879b');
+  label('MOVIMENTO',37,206,11,violet,700);label('TIMELINES GSAP',37,225,10,'#8c879b');
+  label('INTERAÇÃO',800,132,11,pink,700);label('MOUSE + TOQUE',800,151,10,'#8c879b');
+  label('PROFUNDIDADE',800,206,11,cyan,700);label('CURSORES EM ÓRBITA',800,225,10,'#8c879b');
+  label('THEJONYPEIXOTO.COM',36,314,11,cyan,700);label('AN ORIGINAL RENDER FOR THIS REPOSITORY',680,314,9,'#777080');
+ }
+ ctx.strokeStyle='#332b3e';ctx.strokeRect(.5,.5,W-1,H-1);
+};
+renderFrame(0);
+</script>
+</html>

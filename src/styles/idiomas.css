@@ -1,0 +1,12 @@
+html:not([data-idioma='pt']) .hero__cargo { overflow-wrap: anywhere; }
+html:not([data-idioma='pt']) .titulo-grot,
+html:not([data-idioma='pt']) .titulo-cond { overflow-wrap: anywhere; }
+html[data-idioma='ru'] .hero__titulo { font-size: min(calc(300 * var(--u)), 20vw); }
+html[data-idioma='zh'] .hero__titulo { font-size: min(calc(300 * var(--u)), 20vw); }
+@media (min-width: 761px) {
+  html:not([data-idioma='pt']) .hero { min-height: max(800px, calc(1020 * var(--u))); }
+  html:not([data-idioma='pt']) .hero__esq { width: calc(450 * var(--u)); }
+}
+@media (max-width: 760px) {
+  html[data-idioma='ru'] .hero__titulo, html[data-idioma='zh'] .hero__titulo { font-size: 18vw; }
+}

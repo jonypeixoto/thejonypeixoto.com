@@ -1,0 +1,23 @@
+.ias { padding-bottom: calc(40 * var(--su)); }
+.marcas { padding-top: 0; border-top: 0; }
+.marcas__janela { overflow-x: auto; overscroll-behavior-x: contain; scrollbar-width: none; }
+.marcas__janela::-webkit-scrollbar { display: none; }
+.marcas__janela:focus-visible { outline: 2px solid var(--sel); outline-offset: 5px; }
+.marcas__trilho { display: flex; gap: calc(24 * var(--su)); list-style: none; padding: 0; margin: 0; }
+.marcas__card {
+  display: grid;
+  place-items: center;
+  flex: 0 0 calc((100% - 96 * var(--su)) / 5);
+  min-width: 0;
+  height: calc(128 * var(--su));
+  padding: calc(22 * var(--su));
+  background: var(--marca-fundo);
+  border-radius: calc(18 * var(--su));
+  clip-path: polygon(12% 0, 100% 0, 100% 77%, 88% 100%, 0 100%, 0 23%);
+}
+.marcas__card img { display: block; width: 100%; height: 100%; max-height: calc(88 * var(--su)); object-fit: contain; }
+html.monta .marcas:not(.marcas--prontas) [aria-hidden='true'] { visibility: hidden; }
+@media (max-width: 760px) {
+  .marcas__trilho { gap: calc(16 * var(--su)); }
+  .marcas__card { flex-basis: calc(190 * var(--su)); height: calc(110 * var(--su)); }
+}

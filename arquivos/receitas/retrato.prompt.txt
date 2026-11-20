@@ -1,0 +1,9 @@
+Editorial studio portrait for a personal portfolio website. Vertical 3:4 frame (1200 x 1600).
+
+Subject: the same man as in the reference photo (same face, hair, beard and thin round metal glasses), a fictional Brazilian software engineer about 30 years old, wearing a plain black crewneck sweater. Seen in three-quarter profile facing the LEFT side of the frame, chin slightly raised, eyes looking into the distance past the left edge, calm and focused. Head and upper chest; the top of the hair about 6% below the top edge, shoulders cut by the bottom edge, the head centered horizontally.
+
+Background: pure, flat, completely black (#000000), no gradient, no backdrop texture, nothing behind him. This image will be cut out.
+
+Light: cinematic two-color light. A strong saturated red key light from the right/back side painting the hair, ear, neck and right shoulder deep red; a cool blue fill from the front-left lighting the face, nose and cheek. Rich shadows, high contrast, deep blacks on the sweater.
+
+It must read as a real photo shot on an 85mm lens, not a render: natural skin texture and pores, stray hairs catching the red light, fine film grain. No text, no logos, no watermark, no border.

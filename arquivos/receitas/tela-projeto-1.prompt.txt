@@ -1,0 +1,5 @@
+A realistic desktop screenshot (16:10, 1600 x 1000) of a modern web app: the control panel of an AI sales agent that answers an auto parts store's customers on WhatsApp. Fictional brand "Balcão Ágil" (the name appears once, small, in the top-left of the app).
+
+Layout: dark interface (near-black #0f0d0e panels, thin borders), a left sidebar with a few icon items; in the middle a WhatsApp-style conversation between a customer and the agent (short Portuguese messages like "Tem pastilha de freio pro Onix 2019?" and the agent replying with two product options and prices in reais); on the right a column of cards: "Vendas hoje" with a number, a small line chart in orange-red, a list of "Pedidos" with statuses. Accent color: warm orange-red #ff4a1c. Clean typography (a geometric sans), generous spacing, looks like a real shipped SaaS product.
+
+Flat screenshot, straight on, filling the whole frame, no device, no browser chrome, no perspective. Keep text short and correctly spelled in Portuguese. No real brand logos.

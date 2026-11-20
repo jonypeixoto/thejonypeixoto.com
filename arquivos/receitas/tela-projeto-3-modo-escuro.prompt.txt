@@ -1,0 +1,5 @@
+Redraw the reference screenshot as the DARK MODE version of the same dashboard, same 16:10 frame (1600 x 1000), same layout, same positions and sizes of every element, same texts and numbers ("Medidor", "Gasto este mês", "R$ 1.284,50", "Triagem gastou 3× o normal hoje", "Gasto diário por tarefas", the table with Atendimento, Cobrança, Triagem de e-mails, Relatórios and their values).
+
+Dark mode: page background near-black (#0e0e12), sidebar and cards slightly lighter (#16161c) with thin subtle borders, text in light gray and off-white, bars and sparklines in electric violet (#7b61ff), the alert card in a dark amber tint (#2a2012) with amber text. No white or light surfaces anywhere: the brightest thing on screen is the text and the violet bars. Precise and minimal, like a real shipped product in dark mode.
+
+Flat screenshot, straight on, filling the whole frame, no browser chrome, no perspective. Text correctly spelled in Portuguese. No real brand logos.

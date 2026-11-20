@@ -1,0 +1,53 @@
+<!-- Hero (uma tela, escala de cena). Cada bloco com data-camada é uma camada que os agentes montam: quadro (o fundo),
+     titulo, texto (digitado), bloco (caixa que aparece; se tiver camadas dentro, só o fundo e a borda dela) e foto.
+     data-parte divide o hero em montagens separadas no celular, onde ele tem mais de uma tela. -->
+<section class="hero" id="topo" data-montagem="hero">
+  <div class="hero__quadro" data-camada="quadro" aria-hidden="true"></div>
+
+  <div class="hero__a" data-parte>
+    <p class="hero__papel">
+      <span class="hero__papel-1" data-camada="texto">Engenheiro de IA</span>
+      <span class="hero__papel-2" data-camada="texto">Automação · Sistemas</span>
+    </p>
+    <p class="hero__status" data-camada="texto"><i class="ponto" aria-hidden="true"></i>Disponível para novos projetos</p>
+
+    <p class="hero__titulo" data-camada="titulo" aria-hidden="true"><span>PORTFÓLIO</span></p>
+
+    <figure class="hero__foto">
+      <span class="hero__retrato" data-camada="foto" data-ajusta="96,-34"><img src="/img/jony-perfil.webp" width="912" height="1155" alt="Jony de três quartos, com camiseta preta e iluminação azul e rosa" fetchpriority="high" decoding="async" /></span>
+      <figcaption class="hero__jonis" data-camada="texto" translate="no">JONIS.AI</figcaption>
+    </figure>
+
+    <div class="hero__esq">
+      <h1 class="hero__quem">
+        <span class="hero__ola" data-camada="texto">Olá, eu sou</span>
+        <span class="hero__nome" data-camada="texto">JONY<span class="pq">.</span></span>
+      </h1>
+      <p class="hero__cargo" data-camada="texto">Cirurgião digital,<br />engenheiro de IA &amp; automação</p>
+      <p class="hero__texto" data-camada="texto">Construo agentes que atendem, vendem e cobram sozinhos. Ligo planilha, CRM e WhatsApp numa operação que roda 24/7, do primeiro rascunho ao ar.</p>
+      <a class="hero__botao sel" href="#projetos" data-camada="bloco"><span data-camada="texto"><span>Ver projetos</span><svg class="ico" aria-hidden="true"><use href="#u-baixo"/></svg></span></a>
+      <p class="hero__local" data-camada="texto"><svg class="ico" aria-hidden="true"><use href="#u-local"/></svg><span>Remoto - O Brasil inteiro e o mundo</span></p>
+    </div>
+  </div>
+
+  <div class="hero__dir" data-parte>
+    <p class="hero__lema">
+      <span class="hero__aster anel" data-camada="bloco" aria-hidden="true"><svg class="ico"><use href="#u-aster"/></svg></span>
+      <span data-camada="texto">Cada tarefa repetida.<br />Um agente.</span>
+    </p>
+    <ul class="hero__numeros" data-duplica>
+      <li><strong data-camada="texto">20<span class="mais">+</span></strong><span data-camada="texto">Anos escrevendo<br />código</span></li>
+      <li><strong data-camada="texto">120</strong><span data-camada="texto">Projetos entregues<br />nota 4,9 de 5</span></li>
+      <li><a class="hero__num-link sel" href="#projetos"><strong data-camada="texto">26</strong><span data-camada="texto">Agentes no ar<br />agora<svg class="ico" aria-hidden="true"><use href="#u-ne"/></svg></span></a></li>
+    </ul>
+  </div>
+
+  <div class="hero__pe" data-parte>
+    <a class="hero__caso sel" href="#bastidor">
+      <span class="hero__play anel" data-camada="bloco" aria-hidden="true"><svg class="ico"><use href="#u-play"/></svg></span>
+      <span data-camada="texto">Ver um caso por dentro</span>
+      <span class="hero__caso-tipo" data-camada="texto">Agente / WhatsApp</span>
+    </a>
+    <p class="hero__anos" data-camada="texto">Projetos selecionados / 2017–2026</p>
+  </div>
+</section>

@@ -1,0 +1,5 @@
+Redraw the reference screenshot as the DARK MODE version of the same landing page, same 16:10 frame (1600 x 1000), same layout, same positions and sizes of every element, same texts ("Cobrança Leve", "Lembrar sem constranger.", "Cobranças gentis e automáticas por WhatsApp e e-mail.", "Começar agora", the WhatsApp reminder message, "Pago ✓ R$ 480,00", "Lembrete enviado", the top links).
+
+Dark mode: background a deep green-black (#0d1512 to #101a16, a soft dark gradient, no bright areas), headline and text in warm off-white, the button in a muted emerald (#2f8a5e) with off-white text, the phone in dark mode (dark chat background, dark message bubble with light text), the floating cards dark (#16201c) with thin borders. No large white or light surfaces anywhere: the brightest thing on screen is the text. Looks like a real, premium, shipped website in dark mode.
+
+Flat screenshot, straight on, filling the whole frame, no browser chrome, no perspective. Text correctly spelled in Portuguese. No real brand logos.

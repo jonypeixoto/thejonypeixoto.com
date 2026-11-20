@@ -1,0 +1,5 @@
+Redraw the reference wireframe as a DARK grey-box wireframe, same 16:10 frame (1600 x 1000), exactly the same layout, positions and proportions of every block (it must line up with the reference pixel for pixel, for a before/after slider).
+
+Style: dark charcoal background (#1a1b1e), blocks as slightly lighter panels (#24262a) with thin mid-gray strokes (#5a5d63), text replaced by mid-gray bars, image and chart areas as boxes with a thin gray X, buttons as outlined rounded rectangles, and the same handwritten pen annotations with arrows ("conversa do agente", "cards de vendas", "pedidos") in a soft light blue (#7fb2ff). No white or light surfaces: the brightest thing is the blue handwriting. It must look like a real UX wireframe made in a design tool, in dark mode.
+
+Flat, straight on, filling the whole frame. No real brand logos.
