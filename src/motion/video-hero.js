@@ -14,6 +14,8 @@ export function videoHero() {
   video.loop = false;
   video.playsInline = true;
   video.preload = 'none';
+  video.poster = camada.querySelector('img')?.currentSrc || '/img/jony-perfil.webp';
+  let paginaCarregada = document.readyState === 'complete';
   video.setAttribute('aria-hidden', 'true');
   video.setAttribute('disablepictureinpicture', '');
   camada.append(video);
@@ -54,7 +56,7 @@ export function videoHero() {
       if (!camada.classList.contains('rosto-intro')) camada.classList.add('rosto-intro');
     }
     estavaMontada = pronta;
-    if (reduzido.matches || !pronta || falhou) { esconde(); return; }
+    if (!paginaCarregada || reduzido.matches || !pronta || falhou) { esconde(); return; }
     if (!visivel || document.hidden) { video.pause(); fluido.pause(); return; }
     if (entradaConcluida) return;
     if (tentando || !video.paused) return;
@@ -65,6 +67,7 @@ export function videoHero() {
     } catch { esconde(); }
     finally { tentando = false; }
   };
+  if (!paginaCarregada) addEventListener('load', () => { paginaCarregada = true; sincroniza(); }, { once: true });
   const verificaAlpha = () => {
     if (packed || alphaVerificado) return true;
     const teste = document.createElement('canvas');

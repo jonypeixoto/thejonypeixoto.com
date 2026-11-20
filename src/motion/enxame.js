@@ -880,12 +880,14 @@ export function enxame(barra) {
     barra.scan(0);
     const cx = scrollX + innerWidth / 2;
     const cy = scrollY + innerHeight * 0.46;
-    const logo = document.createElement('div');
+    const antecipado = document.getElementById('abertura-logo');
+    const logo = antecipado || document.createElement('div');
+    logo.removeAttribute('id');
     logo.className = 'enx-logo';
-    logo.innerHTML = '<img class="marca-jony" src="/favicon.svg" alt="" width="48" height="48" />';
+    if (!antecipado) logo.innerHTML = '<img class="marca-jony" src="/favicon.svg" fetchpriority="high" alt="" width="48" height="48" />';
     logo.style.transform = `translate(${cx}px, ${cy}px)`;
     palco.append(logo);
-    gsap.fromTo(logo, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'expo.out' });
+    if (!antecipado) gsap.fromTo(logo, { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'expo.out' });
 
     const R = Math.hypot(innerWidth, innerHeight) * 0.62;
     const esc = Math.min(1, innerWidth / 1440 + 0.2);

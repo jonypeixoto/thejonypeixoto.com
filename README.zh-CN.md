@@ -10,6 +10,9 @@
 
 <h1 align="center">THEJONYPEIXOTO.COM</h1>
 <p align="center"><strong>一个在你眼前逐步构建的作品集。</strong><br />Jony Peixoto · 数字外科医生 · 人工智能与自动化工程</p>
+
+[隐私政策](https://www.thejonypeixoto.com/privacidade/)和[使用条款](https://www.thejonypeixoto.com/termos/)以葡萄牙语提供。已添加响应式图片、按需加载的图库和高对比度尺寸标签，并保留原有动画。[审计状态与待办事项](docs/AUDITORIA.md)以葡萄牙语记录。GA4 尚需衡量 ID，移动端 LCP 目标尚未达到。
+
 <p align="center"><a href="https://www.thejonypeixoto.com/">访问网站</a> · <a href="https://tally.so/r/Z9OlBy">开始项目诊断</a> · <a href="docs/ARQUITETURA.md">架构</a> · <a href="docs/MOTION.md">动画实现</a></p>
 <p align="center">
 <a href="https://github.com/jonypeixoto/thejonypeixoto.com/actions/workflows/build.yml"><img src="https://github.com/jonypeixoto/thejonypeixoto.com/actions/workflows/build.yml/badge.svg" alt="网站构建状态" /></a>

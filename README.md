@@ -15,6 +15,9 @@
 <h1 align="center">THEJONYPEIXOTO.COM</h1>
 <p align="center"><strong>A portfolio that builds itself in front of you.</strong><br />Jony Peixoto · Digital Surgeon · AI & Automation Engineering</p>
 
+Privacy and terms are available in Portuguese at [/privacidade/](https://www.thejonypeixoto.com/privacidade/) and [/termos/](https://www.thejonypeixoto.com/termos/). Responsive images, deferred gallery loading and accessible measurement labels preserve the original motion. See the [audit status and remaining setup](docs/AUDITORIA.md). GA4 is pending a measurement ID; the mobile LCP target is not yet met.
+
+
 <p align="center">
   <a href="https://www.thejonypeixoto.com/">Explore the website</a> ·
   <a href="https://tally.so/r/Z9OlBy">Start your project diagnosis</a> ·

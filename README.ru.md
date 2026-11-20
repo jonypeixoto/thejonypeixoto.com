@@ -10,6 +10,9 @@
 
 <h1 align="center">THEJONYPEIXOTO.COM</h1>
 <p align="center"><strong>Портфолио, которое собирается прямо перед вами.</strong><br />Jony Peixoto · «Цифровой хирург» · Инженерия ИИ и автоматизация</p>
+
+[Политика конфиденциальности](https://www.thejonypeixoto.com/privacidade/) и [условия использования](https://www.thejonypeixoto.com/termos/) доступны на португальском языке. Добавлены адаптивные изображения, отложенная загрузка галереи и контрастные подписи размеров; анимация сохранена. [Результаты аудита и оставшиеся задачи](docs/AUDITORIA.md) — на португальском. Для GA4 нужен идентификатор измерения; целевой мобильный LCP пока не достигнут.
+
 <p align="center"><a href="https://www.thejonypeixoto.com/">Открыть сайт</a> · <a href="https://tally.so/r/Z9OlBy">Диагностика проекта</a> · <a href="docs/ARQUITETURA.md">Архитектура</a> · <a href="docs/MOTION.md">Как устроена анимация</a></p>
 <p align="center">
 <a href="https://github.com/jonypeixoto/thejonypeixoto.com/actions/workflows/build.yml"><img src="https://github.com/jonypeixoto/thejonypeixoto.com/actions/workflows/build.yml/badge.svg" alt="Сборка сайта" /></a>

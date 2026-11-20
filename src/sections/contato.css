@@ -366,3 +366,7 @@ a.canal:focus-visible { outline-offset: 2px; }
 }
 
 .rodape__privacidade { display: inline-flex; align-items: center; min-height: 44px; color: var(--texto-2); font-size: var(--s-pequeno); text-decoration: underline; text-underline-offset: .2em; }
+
+.rodape__legal { display: flex; flex-wrap: wrap; gap: 8px 20px; }
+
+.rodape__local { display: inline-flex; align-items: center; min-height: 44px; color: var(--texto-2); font-size: var(--s-pequeno); }

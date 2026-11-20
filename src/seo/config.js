@@ -1,10 +1,10 @@
 export const origem = 'https://www.thejonypeixoto.com';
-export const imagemSocial = `${origem}/img/og-jony-peixoto-whatsapp.jpg`;
+export const imagemSocial = `${origem}/og.jpg`;
 
 export const seo = {
   pt: {
     path: '/', locale: 'pt-BR', ogLocale: 'pt_BR',
-    title: 'Inteligência Artificial, Sites 3D e SaaS | Jony Peixoto',
+    title: 'Inteligência Artificial e Sites 3D no Rio | Jony Peixoto',
     description: 'Engenharia de inteligência artificial, criação de sites 3D, SaaS, XaaS e plataformas com Jony Peixoto. Atendimento no Rio de Janeiro, Reino Unido e mundo.',
   },
   en: {

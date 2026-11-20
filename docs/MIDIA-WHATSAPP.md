@@ -3,7 +3,8 @@
 [Voltar ao guia de SEO](SEO.md)
 
 - Origem: foto `Jony Peixoto.jpg`, enviada pelo responsável pelo site.
-- Arquivo final: [`public/img/og-jony-peixoto-whatsapp.jpg`](../public/img/og-jony-peixoto-whatsapp.jpg).
+- URL atual nas tags: `https://www.thejonypeixoto.com/og.jpg` (cópia idêntica da imagem aprovada, sem recorte novo).
+- Arquivo original otimizado: [`public/img/og-jony-peixoto-whatsapp.jpg`](../public/img/og-jony-peixoto-whatsapp.jpg).
 - Formato: JPEG, 1200 × 630 pixels, aproximadamente 63 KB.
 - Método: edição com a ferramenta integrada ImageGen para ampliar o enquadramento horizontal; exportação JPEG com ajuste proporcional e margens, sem recorte do rosto.
 - Composição: rosto e óculos inteiros, centralizados dentro da área segura. Não há texto sobre o rosto. A foto é usada no Open Graph e no Twitter Card de todos os idiomas.

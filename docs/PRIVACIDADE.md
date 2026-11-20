@@ -2,7 +2,7 @@
 
 Página estática em /privacidade/, com conteúdo em src/sections/privacidade.html e entrada independente do motion em src/legal.js. O rodapé das cinco versões do portfólio aponta para a política em português. Incluída no sitemap.
 
-Responsável confirmado: Jony Peixoto, pessoa física. Contato de privacidade: info@thejonypeixoto.com. Atendimento online; nenhum endereço, CPF ou CNPJ foi inventado ou publicado. Identificação fiscal e cidade continuam pendentes para a etapa de informações comerciais.
+Responsável confirmado: Jony Peixoto, pessoa física. Contato de privacidade: info@thejonypeixoto.com. Atendimento online; nenhum endereço, CPF ou CNPJ foi inventado ou publicado. O responsável pediu expressamente para não publicar CPF e indicou atendimento pela internet. Nenhuma cidade geográfica foi inventada.
 
 Retenção confirmada pelo responsável: até 12 meses após o último contato de quem não contratar, com revisão mensal. Essa revisão e a exclusão em e-mail, WhatsApp, Tally e demais fornecedores dependem da operação do responsável; não são automatizadas por este site. Contratos e obrigações legais são tratados separadamente.
 

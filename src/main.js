@@ -40,9 +40,15 @@ try {
 } catch (erro) {
   console.error('Não foi possível carregar o idioma. Usando o conteúdo original.', erro);
 }
-import('./components/analytics.jsx')
-  .then(({ montaAnalytics }) => montaAnalytics())
-  .catch(erro => console.warn('Não foi possível inicializar o Analytics.', erro));
+const iniciaAnalytics = () => {
+  const carrega = () => import('./components/analytics.jsx')
+    .then(({ montaAnalytics }) => montaAnalytics())
+    .catch(erro => console.warn('Não foi possível inicializar o Analytics.', erro));
+  if ('requestIdleCallback' in window) requestIdleCallback(carrega, { timeout: 2500 });
+  else setTimeout(carrega, 0);
+};
+if (document.readyState === 'complete') iniciaAnalytics();
+else addEventListener('load', iniciaAnalytics, { once: true });
 nav();
 interface_();
 try {

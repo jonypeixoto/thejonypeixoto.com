@@ -49,10 +49,11 @@ for (const [code, data] of Object.entries(seo)) {
   }
   assert.equal(element('a').filter(node => attr(node, 'data-idioma')).length, 5, 'Crawlable language links');
   assert.ok(element('a').some(node => attr(node, 'href') === '/privacidade/'), `${code}: privacy footer link missing`);
+  assert.ok(element('a').some(node => attr(node, 'href') === '/termos/'), `${code}: terms footer link missing`);
   console.log(`SEO OK: ${data.path} (${data.locale})`);
 }
 const map = readFileSync('dist/sitemap.xml', 'utf8');
-assert.equal((map.match(/<loc>/g) || []).length, Object.keys(seo).length + 1);
+assert.equal((map.match(/<loc>/g) || []).length, Object.keys(seo).length + 2);
 for (const code of Object.keys(seo)) assert.ok(map.includes(`<loc>${urlIdioma(code)}</loc>`));
 assert.ok(readFileSync('dist/robots.txt', 'utf8').includes('Sitemap: https://www.thejonypeixoto.com/sitemap.xml'));
 assert.ok(existsSync(`dist${new URL(imagemSocial).pathname}`));
@@ -65,3 +66,11 @@ assert.ok(privacy.includes('revisão mensal'));
 assert.ok(privacy.includes('https://www.thejonypeixoto.com/privacidade/'));
 assert.ok(!privacy.includes('<!-- @secao'));
 console.log('Privacy OK: static page, confirmed contact and retention');
+
+const terms = readFileSync('dist/termos/index.html', 'utf8');
+assert.ok(terms.includes('Termos de Uso | Jony Peixoto'));
+assert.ok(terms.includes('prazo de 7 dias'));
+assert.ok(terms.includes('proposta ou contrato'));
+assert.ok(!terms.includes('<!-- @secao'));
+for (const route of ['privacidade', 'termos']) assert.ok(map.includes('<loc>https://www.thejonypeixoto.com/' + route + '/</loc>'));
+console.log('Terms OK: agreed contracting model and statutory consumer rights');

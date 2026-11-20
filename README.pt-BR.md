@@ -15,6 +15,9 @@
 <h1 align="center">THEJONYPEIXOTO.COM</h1>
 <p align="center"><strong>O portfólio que se constrói na sua frente.</strong><br />Jony Peixoto · Cirurgião Digital · Engenharia de IA & Automação</p>
 
+A [política de privacidade](https://www.thejonypeixoto.com/privacidade/) e os [termos de uso](https://www.thejonypeixoto.com/termos/) estão disponíveis em português. Imagens responsivas, galeria sob demanda e etiquetas com contraste preservam as animações. Consulte o [estado da auditoria e as pendências](docs/AUDITORIA.md). O GA4 aguarda um ID de medição; a meta de LCP mobile ainda não foi atingida.
+
+
 <p align="center">
   <a href="https://www.thejonypeixoto.com/">Visitar o site</a> ·
   <a href="https://tally.so/r/Z9OlBy">Diagnóstico do seu projeto</a> ·

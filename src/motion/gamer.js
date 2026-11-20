@@ -30,4 +30,16 @@ export async function gamer() {
   for (const el of [controles, ...controles.querySelectorAll('[data-camada]'), ...lista.querySelectorAll('[data-camada]')]) {
     el.removeAttribute('data-camada');
   }
+  // A galeria HTML continua utilizável até a ilha React se aproximar da tela.
+  const observer = new IntersectionObserver(async ([entry]) => {
+    if (!entry.isIntersecting) return;
+    observer.disconnect();
+    try {
+      const { montaGamer } = await import('../components/gamer-fan.jsx');
+      montaGamer(secao, cards);
+      lista.hidden = true;
+      controles.hidden = true;
+    } catch (erro) { console.warn('Galeria original mantida.', erro); }
+  }, { rootMargin: '900px' });
+  observer.observe(secao);
 }

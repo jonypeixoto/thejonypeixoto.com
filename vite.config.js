@@ -13,7 +13,7 @@ const secoes = () => ({
   name: 'secoes',
   transformIndexHtml: { order: 'pre', handler(html, context) {
     const path = new URL(context.originalUrl || context.path || '/', 'http://localhost').pathname;
-    if (/^\/privacidade(?:\/|$)/.test(path)) return inclui(html);
+    if (/^\/(?:privacidade|termos)(?:\/|$)/.test(path)) return inclui(html);
     return preparaPagina(inclui(html), idiomaPorCaminho(path));
   } },
   configureServer(server) {
@@ -38,6 +38,20 @@ const secoes = () => ({
 });
 
 export default defineConfig({
-  plugins: [secoes()],
-  build: { target: 'es2022', assetsInlineLimit: 0, rollupOptions: { input: { main: resolve(import.meta.dirname, 'index.html'), privacidade: resolve(import.meta.dirname, 'privacidade/index.html') } } },
+  plugins: [secoes(), {
+    name: 'estilos-no-html',
+    // O CSS é pequeno após compressão: incluí-lo no HTML evita a viagem
+    // bloqueante e mantém todas as medidas prontas antes do enxame.
+    generateBundle: { order: 'post', handler(_, bundle) {
+      for (const asset of Object.values(bundle)) {
+        if (asset.type !== 'asset' || !asset.fileName.endsWith('.html')) continue;
+        asset.source = String(asset.source).replace(/<link\b[^>]*rel="stylesheet"[^>]*>/g, tag => {
+          const href = tag.match(/href="([^"]+)"/)?.[1];
+          const css = href && bundle[href.replace(/^\//, '')];
+          return css?.type === 'asset' ? '<style>' + String(css.source) + '</style>' : tag;
+        });
+      }
+    } },
+  }],
+  build: { target: 'es2022', assetsInlineLimit: 0, rollupOptions: { input: { main: resolve(import.meta.dirname, 'index.html'), privacidade: resolve(import.meta.dirname, 'privacidade/index.html'), termos: resolve(import.meta.dirname, 'termos/index.html') } } },
 });

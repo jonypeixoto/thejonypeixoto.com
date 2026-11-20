@@ -6,7 +6,7 @@
 
 **Português — página principal**
 
-- Título: **Inteligência Artificial, Sites 3D e SaaS | Jony Peixoto**
+- Título: **Inteligência Artificial e Sites 3D no Rio | Jony Peixoto**
 - Descrição: **Engenharia de inteligência artificial, criação de sites 3D, SaaS, XaaS e plataformas com Jony Peixoto. Atendimento no Rio de Janeiro, Reino Unido e mundo.**
 
 **Inglês — Reino Unido e público internacional**
