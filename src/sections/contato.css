@@ -364,3 +364,5 @@ a.canal:focus-visible { outline-offset: 2px; }
 @media (max-width: 760px) {
   .form__eva { width: min(100%, calc(320 * var(--su))); margin-inline: auto; margin-bottom: calc(-24 * var(--su)); }
 }
+
+.rodape__privacidade { display: inline-flex; align-items: center; min-height: 44px; color: var(--texto-2); font-size: var(--s-pequeno); text-decoration: underline; text-underline-offset: .2em; }

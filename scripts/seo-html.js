@@ -96,5 +96,5 @@ export function preparaPagina(html, idioma = 'pt') {
 
 export function sitemap() {
   const links = alternativos.map(([lang, code]) => `<xhtml:link rel="alternate" hreflang="${lang}" href="${urlIdioma(code)}"/>`).join('');
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${Object.keys(seo).map(code => `<url><loc>${urlIdioma(code)}</loc>${links}</url>`).join('')}</urlset>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${Object.keys(seo).map(code => `<url><loc>${urlIdioma(code)}</loc>${links}</url>`).join('')}<url><loc>https://www.thejonypeixoto.com/privacidade/</loc></url></urlset>\n`;
 }

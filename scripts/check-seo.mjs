@@ -48,11 +48,20 @@ for (const [code, data] of Object.entries(seo)) {
     assert.ok(existsSync(`dist${attr(node, 'src')}`), `${code}: missing build asset`);
   }
   assert.equal(element('a').filter(node => attr(node, 'data-idioma')).length, 5, 'Crawlable language links');
+  assert.ok(element('a').some(node => attr(node, 'href') === '/privacidade/'), `${code}: privacy footer link missing`);
   console.log(`SEO OK: ${data.path} (${data.locale})`);
 }
 const map = readFileSync('dist/sitemap.xml', 'utf8');
-assert.equal((map.match(/<loc>/g) || []).length, Object.keys(seo).length);
+assert.equal((map.match(/<loc>/g) || []).length, Object.keys(seo).length + 1);
 for (const code of Object.keys(seo)) assert.ok(map.includes(`<loc>${urlIdioma(code)}</loc>`));
 assert.ok(readFileSync('dist/robots.txt', 'utf8').includes('Sitemap: https://www.thejonypeixoto.com/sitemap.xml'));
 assert.ok(existsSync(`dist${new URL(imagemSocial).pathname}`));
 console.log('SEO OK: sitemap, robots.txt, structured data and social image');
+
+const privacy = readFileSync('dist/privacidade/index.html', 'utf8');
+assert.ok(privacy.includes('info@thejonypeixoto.com'));
+assert.ok(privacy.includes('12 meses após a última interação'));
+assert.ok(privacy.includes('revisão mensal'));
+assert.ok(privacy.includes('https://www.thejonypeixoto.com/privacidade/'));
+assert.ok(!privacy.includes('<!-- @secao'));
+console.log('Privacy OK: static page, confirmed contact and retention');

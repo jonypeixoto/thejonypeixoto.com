@@ -13,6 +13,7 @@ const secoes = () => ({
   name: 'secoes',
   transformIndexHtml: { order: 'pre', handler(html, context) {
     const path = new URL(context.originalUrl || context.path || '/', 'http://localhost').pathname;
+    if (/^\/privacidade(?:\/|$)/.test(path)) return inclui(html);
     return preparaPagina(inclui(html), idiomaPorCaminho(path));
   } },
   configureServer(server) {
@@ -38,5 +39,5 @@ const secoes = () => ({
 
 export default defineConfig({
   plugins: [secoes()],
-  build: { target: 'es2022', assetsInlineLimit: 0 },
+  build: { target: 'es2022', assetsInlineLimit: 0, rollupOptions: { input: { main: resolve(import.meta.dirname, 'index.html'), privacidade: resolve(import.meta.dirname, 'privacidade/index.html') } } },
 });
