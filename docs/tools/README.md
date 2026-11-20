@@ -34,3 +34,5 @@ ffmpeg -i gravacao.webm -vf "fps=12,scale=960:-2:flags=lanczos,split[a][b];[a]pa
 ```
 
 Prefira trechos curtos e arquivos leves. A captura do site é separada das cenas ilustrativas 3D. Confira os GIFs no README do GitHub depois de publicar; o leitor pode ter a reprodução automática de imagens desativada nas preferências de acessibilidade.
+
+Para capturar novamente o site com o gerador incluído, deixe `npm run dev` ativo na raiz e execute `node capture-site.mjs` em `docs/tools`. A origem padrão é `http://localhost:5300`; use `README_SITE_URL` para outra origem. A gravação e frames temporários ficam em `frames/`.

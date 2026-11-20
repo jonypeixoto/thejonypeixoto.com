@@ -85,7 +85,7 @@ Os assets usam URLs como `/img/...` e `/video/...`. Isso funciona na raiz de `th
 
 ## Arquivos locais que ficam fora do Git
 
-`dist/`, `node_modules/`, `.npm-cache/`, `.reanimate/`, logs, `.env*`, materiais-fonte em `fonte/`, a cópia original em `kairo/` e prints de conceito não são enviados. As receitas textuais de imagens e os guias da base continuam disponíveis, com contexto nos créditos.
+`dist/`, `node_modules/`, `.npm-cache/`, `.reanimate/`, logs, `.env*`, materiais-fonte em `fonte/`, as cópias históricas em `kairo/` e `arquivos/site/` e prints de conceito não são enviados. As receitas textuais de imagens e os guias da base continuam disponíveis, com contexto nos créditos.
 
 ## Documentação visual
 
