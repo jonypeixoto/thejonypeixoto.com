@@ -4,32 +4,32 @@ export const imagemSocial = `${origem}/og.jpg`;
 export const seo = {
   pt: {
     path: '/', locale: 'pt-BR', ogLocale: 'pt_BR',
-    title: 'Inteligência Artificial e Sites 3D no Rio | Jony Peixoto',
+    title: 'Engenheiro de IA, Sites 3D e XaaS | Jony Peixoto',
     description: 'Engenharia de inteligência artificial, criação de sites 3D, SaaS, XaaS e plataformas com Jony Peixoto. Atendimento no Rio de Janeiro, Reino Unido e mundo.',
   },
   en: {
     path: '/en/', locale: 'en-GB', ogLocale: 'en_GB',
-    title: 'AI Engineering, 3D Websites & SaaS | Jony Peixoto',
+    title: 'AI Engineer, 3D Sites & XaaS | Jony Peixoto',
     description: 'AI engineering, 3D websites, SaaS, XaaS and custom platforms with Jony Peixoto. Remote projects for Rio de Janeiro, the United Kingdom and clients worldwide.',
   },
   es: {
     path: '/es/', locale: 'es', ogLocale: 'es_ES',
-    title: 'Inteligencia Artificial, Sitios 3D y SaaS | Jony Peixoto',
+    title: 'Ingeniero de IA, Sitios 3D y XaaS | Jony Peixoto',
     description: 'Ingeniería de inteligencia artificial, sitios web 3D, SaaS, XaaS y plataformas con Jony Peixoto. Atención remota en Río de Janeiro, Reino Unido y todo el mundo.',
   },
   ru: {
     path: '/ru/', locale: 'ru', ogLocale: 'ru_RU',
-    title: 'Инженерия ИИ, 3D-сайты и SaaS | Jony Peixoto',
+    title: 'Инженер ИИ, 3D-сайты и XaaS | Jony Peixoto',
     description: 'Инженерия искусственного интеллекта, 3D-сайты, SaaS, XaaS и платформы с Jony Peixoto. Удалённая работа: Рио-де-Жанейро, Великобритания и весь мир.',
   },
   ar: {
     path: '/ar/', locale: 'ar', ogLocale: 'ar_AE',
-    title: 'هندسة الذكاء الاصطناعي ومواقع ثلاثية الأبعاد | Jony Peixoto',
+    title: 'مهندس ذكاء اصطناعي ومواقع ثلاثية الأبعاد وXaaS | Jony Peixoto',
     description: 'هندسة الذكاء الاصطناعي وتطوير المواقع ثلاثية الأبعاد ومنصات SaaS وXaaS مع Jony Peixoto. خدمات عن بُعد لريو دي جانيرو والمملكة المتحدة والعالم.',
   },
   zh: {
     path: '/zh/', locale: 'zh-CN', ogLocale: 'zh_CN',
-    title: '人工智能工程、3D 网站与 SaaS 平台 | Jony Peixoto',
+    title: '人工智能工程师、3D 网站与 XaaS | Jony Peixoto',
     description: 'Jony Peixoto 提供人工智能工程、3D 网站制作、SaaS、XaaS 和定制平台开发，远程服务覆盖里约热内卢、英国及全球客户。',
   },
 };
