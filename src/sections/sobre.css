@@ -115,16 +115,16 @@
   margin-top: auto;
   padding-top: calc(40 * var(--su));
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: calc(18 * var(--su));
+  flex-direction: column;
+  align-items: stretch;
+  gap: calc(12 * var(--su));
 }
 .sobre__cv {
-  margin-left: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: calc(12 * var(--su));
+  width: 100%;
   min-height: 44px;
   max-width: 100%;
   padding: calc(12 * var(--su));
@@ -135,10 +135,12 @@
   text-transform: uppercase;
   transition: background-color var(--t-micro) var(--ease);
 }
+.sobre__cv--ats { background: transparent; color: var(--texto); }
 .sobre__cv > span { min-width: 0; }
 .sobre__cv svg { width: 18px; height: 18px; flex-shrink: 0; }
 @media (hover: hover) and (pointer: fine) {
   html:not(.rolando) .sobre__cv:hover { background: var(--acento-hover); }
+  html:not(.rolando) .sobre__cv--ats:hover { background: var(--card-topo); }
 }
 .sobre__card-pe {
   font: 600 13px / 1.6 var(--sans);

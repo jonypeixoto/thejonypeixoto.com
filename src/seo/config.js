@@ -51,7 +51,7 @@ export function dadosEstruturados(idioma = 'pt') {
     '@graph': [
       {
         '@type': 'Person', '@id': person, name: 'Jony Peixoto', url: origem,
-        jobTitle: 'AI & Automation Engineer', image: `${origem}/img/jony-perfil.webp`,
+        jobTitle: 'AI Engineer, 3D Websites & XaaS', image: `${origem}/img/jony-perfil.webp`,
         knowsAbout: ['Artificial intelligence', 'AI engineering', 'Automation', '3D websites', 'SaaS', 'XaaS', 'Platform development'],
         sameAs: ['https://github.com/jonypeixoto', 'https://www.linkedin.com/in/jonypeixoto/', 'https://www.youtube.com/@thejonypeixoto', 'https://jonypeixoto.substack.com/', 'https://share.google/qtJsRMuGWMKr3FFDJ'],
       },
